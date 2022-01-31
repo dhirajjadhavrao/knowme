@@ -17,6 +17,6 @@ public class GitController {
 
     @GetMapping("/gitdetails")
     public ResponseEntity getGitProfileDetails(){
-        return ResponseEntity.ok(serviceManager.getGitService().getGitRepositoryData());
+        return ResponseEntity.ok(serviceManager.getGitService().getGitProfileDetails());
     }
 }

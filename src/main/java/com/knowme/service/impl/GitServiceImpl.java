@@ -18,8 +18,13 @@ public class GitServiceImpl implements GitService {
     private GitUtils gitUtils;
 
     @Override
-    public String getGitRepositoryData() {
+    public String getGitProfileDetails() {
         return getGitProfile();
+    }
+
+    @Override
+    public String getListOfGitRepositories() {
+        return null;
     }
 
     private String getGitProfile() {
