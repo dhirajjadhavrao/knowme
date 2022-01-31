@@ -4,6 +4,9 @@ import com.knowme.service.PingService;
 import com.knowme.vo.GenericResponseVo;
 import org.springframework.stereotype.Service;
 
+/**
+ * @author Dhiraj Jadhavrao
+ * */
 @Service
 public class PingServiceImpl implements PingService {
     @Override

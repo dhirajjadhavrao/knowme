@@ -1,5 +1,8 @@
 package com.knowme.vo;
 
+/**
+ * @author Dhiraj Jadhavrao
+ * */
 public class GenericResponseVo {
     private String status;
     private String statusMessage;

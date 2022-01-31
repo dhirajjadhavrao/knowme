@@ -10,13 +10,13 @@ import org.springframework.web.bind.annotation.RestController;
  * @author Dhiraj Jadhavrao
  * */
 @RestController
-public class PingController {
+public class GitController {
 
     @Autowired
     private ServiceManager serviceManager;
 
-    @GetMapping("/ping")
-    public ResponseEntity<?> getPing(){
-        return ResponseEntity.ok(serviceManager.getPingService().getPing());
+    @GetMapping("/gitdetails")
+    public ResponseEntity getGitProfileDetails(){
+        return ResponseEntity.ok(serviceManager.getGitService().getGitRepositoryData());
     }
 }
