@@ -9,14 +9,19 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * @author Dhiraj Jadhavrao
  * */
-@RestController
+@RestController(value = "/gitdetails")
 public class GitController {
 
     @Autowired
     private ServiceManager serviceManager;
 
-    @GetMapping("/gitdetails")
+    @GetMapping("/profile")
     public ResponseEntity getGitProfileDetails(){
         return ResponseEntity.ok(serviceManager.getGitService().getGitProfileDetails());
+    }
+
+    @GetMapping("/repos")
+    public ResponseEntity getReposList(){
+        return null;
     }
 }

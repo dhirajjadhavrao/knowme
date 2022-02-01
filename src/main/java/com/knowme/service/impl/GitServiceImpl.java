@@ -1,5 +1,7 @@
 package com.knowme.service.impl;
 
+import com.knowme.entity.GitOwner;
+import com.knowme.repository.GitOwnerDao;
 import com.knowme.service.GitService;
 import com.knowme.utils.GitUtils;
 import org.kohsuke.github.GHMyself;
@@ -17,8 +19,16 @@ public class GitServiceImpl implements GitService {
     @Autowired
     private GitUtils gitUtils;
 
+    @Autowired
+    private GitOwnerDao gitOwnerDao;
+
     @Override
     public String getGitProfileDetails() {
+        GitOwner owner = new GitOwner();
+        owner.setGitId(100L);
+        owner.setName("Test");
+        owner = gitOwnerDao.save(owner);
+        System.out.println(owner.getId());
         return getGitProfile();
     }
 
