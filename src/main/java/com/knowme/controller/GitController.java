@@ -6,17 +6,24 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.io.IOException;
+
 /**
  * @author Dhiraj Jadhavrao
  * */
-@RestController
+@RestController(value = "/gitdetails")
 public class GitController {
 
     @Autowired
     private ServiceManager serviceManager;
 
-    @GetMapping("/gitdetails")
-    public ResponseEntity getGitProfileDetails(){
+    @GetMapping("/profile")
+    public ResponseEntity getGitProfileDetails() throws IOException {
         return ResponseEntity.ok(serviceManager.getGitService().getGitProfileDetails());
+    }
+
+    @GetMapping("/repos")
+    public ResponseEntity getReposList(){
+        return null;
     }
 }
